@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Network/Network.xcodeproj">
+      location = "group:BBNetwork/BBNetwork.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:Movies.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
