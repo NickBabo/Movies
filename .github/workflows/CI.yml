@@ -11,7 +11,7 @@ jobs:
       - name: Set Xcode version
         uses: maxim-lobanov/setup-xcode@v1.1
         with:
-            xcode-version: 12.1
+          xcode-version: 12.1
         - name: Build
         run: |
         set -o pipefail
