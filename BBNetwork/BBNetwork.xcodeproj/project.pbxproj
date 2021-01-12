@@ -103,6 +103,7 @@
 		A1B2633A25ACF3B300998DD0 /* BBNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNetwork.swift; sourceTree = "<group>"; };
 		A1B2633B25ACF3B300998DD0 /* BBRequestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBRequestConfigurator.swift; sourceTree = "<group>"; };
 		A1B2633C25ACF3B300998DD0 /* BBService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBService.swift; sourceTree = "<group>"; };
+		A1B263B425AE54D800998DD0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		EB7E175D6719885770109BE4 /* Pods_BBNetwork_BBNetworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBNetwork_BBNetworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +166,7 @@
 				A1B2632825ACF3B300998DD0 /* Classes */,
 				A1B2632325ACF3B300998DD0 /* Resources */,
 				A1B262E325ACF35300998DD0 /* BBNetwork.h */,
+				A1B263B425AE54D800998DD0 /* Debug.xcconfig */,
 				A1B262E425ACF35300998DD0 /* Info.plist */,
 			);
 			path = BBNetwork;
@@ -544,6 +546,7 @@
 /* Begin XCBuildConfiguration section */
 		A1B262F225ACF35300998DD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B263B425AE54D800998DD0 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -608,6 +611,7 @@
 		};
 		A1B262F325ACF35300998DD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B263B425AE54D800998DD0 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -772,7 +776,7 @@
 				A1B262F325ACF35300998DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A1B262F425ACF35300998DD0 /* Build configuration list for PBXNativeTarget "BBNetwork" */ = {
 			isa = XCConfigurationList;
@@ -781,7 +785,7 @@
 				A1B262F625ACF35300998DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A1B262F725ACF35300998DD0 /* Build configuration list for PBXNativeTarget "BBNetworkTests" */ = {
 			isa = XCConfigurationList;
@@ -790,7 +794,7 @@
 				A1B262F925ACF35300998DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
