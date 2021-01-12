@@ -11,6 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: swift build -v
+      run: |
+        cd Movies
+        swift build -v
+        |
     - name: Run tests
-      run: swift test -v
+      run: | 
+        cd Movies
+        swift test -v
+        |
