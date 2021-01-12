@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Build and test
         run: |
-          xcodebuild clean test -workspace Movies.xcworkspace -scheme BBNetwork -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          cd BBNetwork
+          xcodebuild clean test -project BBNetwork.xcodeproj -scheme BBNetwork -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
           bash <(curl -s https://codecov.io/bash)
         env:
          destination: ${{ matrix.destination }}
