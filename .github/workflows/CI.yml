@@ -17,12 +17,7 @@ jobs:
       - name: Setup pods
         run: pod install
       - name: Build
-        run: xcodebuild clean build-for-testing \
-               -workspace Movies.xcworkspace \
-               -scheme BBNetwork \
-               -destination "platform=iOS Simulator,name=iPhone 8" \
-               -derivedDataPath build \
-               CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO |
+        run: xcodebuild clean build-for-testing -workspace Movies.xcworkspace -scheme BBNetwork -destination "platform=iOS Simulator,name=iPhone 8" -derivedDataPath build \CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
       - name: Archive Derived Data
         uses: actions/upload-artifact@v2
         with:
@@ -49,12 +44,6 @@ jobs:
         with:
           name: build
       - name: test
-        run: xcodebuild test-without-building \
-              -workspace Movies.xcworkspace \
-              -scheme BBNetwork \
-              -enableCodeCoverage YES \
-              -destination "platform=iOS Simulator,name=iPhone 8" \
-              -derivedDataPath build \
-              CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO\
+        run: xcodebuild test-without-building -workspace Movies.xcworkspace -scheme BBNetwork -enableCodeCoverage YES -destination "platform=iOS Simulator,name=iPhone 8" -derivedDataPath build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env:
          destination: ${{ matrix.destination }}
